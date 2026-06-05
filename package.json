@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "bun --watch ./src/index.ts",
-    "start": "./dist/index.js",
+    "start": "bun ./dist/index.js",
+    "vercel-start": "bun ./dist/index.js",
     "build": "bun build ./src/index.ts --target=bun --outdir ./dist --minify",
     "compile": "bun build ./src/index.ts --compile --outfile main",
     "auth:generate": "bun x @better-auth/cli generate --config ./src/lib/auth.ts"
