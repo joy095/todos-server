@@ -37,4 +37,6 @@ app.get("/", (_req, res) => {
   });
 });
 
-export default app;
+app.listen(port, () => {
+  console.log(`Todo app listening on http://localhost:${port}`);
+});
