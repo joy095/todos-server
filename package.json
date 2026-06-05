@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch ./src/index.ts",
+    "start": "./main",
+    "build": "bun build ./src/index.ts --target=bun --outdir ./dist  --minify",
+    "compile": "bun build ./src/index.ts --compile --outfile main",
+    "auth:generate": "bun x @better-auth/cli generate --config ./src/lib/auth.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@better-auth/mongo-adapter": "^1.6.11",
+    "better-auth": "^1.6.11",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.2.0",
+    "zod": "^4.4.3"
+  }
+}
