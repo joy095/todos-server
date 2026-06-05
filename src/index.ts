@@ -37,5 +37,4 @@ app.get("/", (_req, res) => {
   });
 });
 
-module.exports = app;
-
+export default app;
