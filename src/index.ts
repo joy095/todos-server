@@ -5,6 +5,7 @@ import cors from "cors";
 import { ORIGIN, PORT } from "./env";
 import { httpLogger } from "./middlewares/logger.middleware";
 import taskRoutes from "./routes/task.routes";
+import "dotenv/config"
 
 const app = express();
 const port = PORT;
