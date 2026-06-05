@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { jwt, openAPI } from "better-auth/plugins";
 import { db, dbClient } from "../db";
+import { ORIGIN } from "../env";
 
 export const auth = betterAuth({
   experimental: { joins: true },
@@ -34,6 +35,8 @@ export const auth = betterAuth({
       },
     }),
   ],
+
+  trustedOrigins: [ORIGIN],
 
   advanced: {
     disableCSRFCheck: true, // ⚠️ Only for testing!
